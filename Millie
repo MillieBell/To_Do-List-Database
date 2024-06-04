@@ -1,0 +1,18 @@
+echo "# To_Do-List-Database" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/MillieBell/To_Do-List-Database.git
+git push -u origin main
+
+--To do list with the number of minutes it will take to complete each item. 
+Inserted a new item with estimated minutes it will take to complete and sum of minutes--
+
+CREATE TABLE todo_list (id INTEGER PRIMARY KEY, item TEXT, minutes INTEGER);
+INSERT INTO todo_list VALUES (1, "Wash the dishes", 15);
+INSERT INTO todo_list VALUES (2, "vacuuming", 20);
+INSERT INTO todo_list VALUES (3, "Learn some stuff on KA", 30);
+INSERT INTO todo_list VALUES (4, "Estimated minutes", 65);
+
+SELECT SUM(minutes) FROM todo_list;
